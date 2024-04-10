@@ -294,8 +294,8 @@
                       <div class="title_banner_product__actions-817">
                         <div class="title_banner_product_actions__row-10a">
                           <a
-                            href="#first-step"
-                            class="button-f7d button_primary-f7d button_lg-f7d title_banner_product_actions__button-10a"
+                            href="#"
+                            class="orderCard button-f7d button_primary-f7d button_lg-f7d title_banner_product_actions__button-10a"
                             data-title-button="true"
                             target="_self"
                             ><span
@@ -569,8 +569,9 @@
                               class="advantages_second_item__button_container-bce"
                             >
                               <a
-                                href="#first-step"
-                                class="button-f7d button_primary-f7d button_md-f7d"
+                                href="#"
+                                class="orderCard button-f7d button_primary-f7d button_md-f7d"
+                                target="_self"
                                 ><span
                                   class="button__text-f7d button_stretchText-f7d"
                                   >Оформить карту</span
@@ -2534,3 +2535,14 @@
     </div>
   </body>
 </html>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramsToLink = urlParams.toString();
+  document.addEventListener("DOMContentLoaded", function (event) {
+    const buttons = document.querySelectorAll(".orderCard");
+    buttons.forEach((button) => {
+      button.href = paramsToLink;
+    });
+  });
+</script>
