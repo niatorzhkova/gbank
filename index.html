@@ -230,24 +230,7 @@
                   >
                     <div class="title_banner_product_image-f0c">
                       <div class="title_banner_product_image__inner-f0c">
-                        <picture
-                          ><source
-                            type="image/webp"
-                            srcset="
-                              https://cdn.gpb.ru/upload/files/iblock/57f/Product-banner-_-DK-Mir-_-1424x984-_3_.webp    2x,
-                              https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.webp
-                            " />
-                          <source
-                            type="image/png"
-                            srcset="
-                              https://cdn.gpb.ru/upload/files/iblock/57f/Product-banner-_-DK-Mir-_-1424x984-_3_.png    2x,
-                              https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.png
-                            " />
-                          <img
-                            class="nr-picture"
-                            src="https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.png"
-                            alt="Доход до 35% по карте"
-                        /></picture>
+                        <img alt="баннер" src="./images/banner-top.png" />
                       </div>
                     </div>
                   </div>
@@ -257,24 +240,7 @@
                     <div class="title_banner_product__picture-817">
                       <div class="title_banner_product_image-f0c">
                         <div class="title_banner_product_image__inner-f0c">
-                          <picture
-                            ><source
-                              type="image/webp"
-                              srcset="
-                                https://cdn.gpb.ru/upload/files/iblock/57f/Product-banner-_-DK-Mir-_-1424x984-_3_.webp    2x,
-                                https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.webp
-                              " />
-                            <source
-                              type="image/png"
-                              srcset="
-                                https://cdn.gpb.ru/upload/files/iblock/57f/Product-banner-_-DK-Mir-_-1424x984-_3_.png    2x,
-                                https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.png
-                              " />
-                            <img
-                              class="nr-picture"
-                              src="https://cdn.gpb.ru/upload/files/iblock/57f/x1_Product-banner-_-DK-Mir-_-1424x984-_3_.png"
-                              alt="Доход до 35% по карте"
-                          /></picture>
+                          <img alt="баннер" src="./images/banner-top.png" />
                         </div>
                       </div>
                     </div>
@@ -347,24 +313,7 @@
                     <div class="advantages_second_item-bce">
                       <div class="advantages_second_item__item-bce undefined">
                         <div class="advantages_second_item__picture-bce">
-                          <picture
-                            ><source
-                              type="image/webp"
-                              srcset="
-                                https://cdn.gpb.ru/upload/files/iblock/946/Advantages_Second_DK_1200x960-_2_.webp    2x,
-                                https://cdn.gpb.ru/upload/files/iblock/946/x1_Advantages_Second_DK_1200x960-_2_.webp
-                              " />
-                            <source
-                              type="image/png"
-                              srcset="
-                                https://cdn.gpb.ru/upload/files/iblock/946/Advantages_Second_DK_1200x960-_2_.png    2x,
-                                https://cdn.gpb.ru/upload/files/iblock/946/x1_Advantages_Second_DK_1200x960-_2_.png
-                              " />
-                            <img
-                              class="nr-picture"
-                              src="https://cdn.gpb.ru/upload/files/iblock/946/x1_Advantages_Second_DK_1200x960-_2_.png"
-                              alt="25% кэшбэк на топовые категории"
-                          /></picture>
+                          <img alt="banner" src="./images/banner-bottom.png" />
                         </div>
                         <div class="advantages_second_item__content-bce">
                           <div>
@@ -2542,7 +2491,14 @@
   document.addEventListener("DOMContentLoaded", function (event) {
     const buttons = document.querySelectorAll(".orderCard");
     buttons.forEach((button) => {
-      button.href = paramsToLink;
+      if (paramsToLink.length > 0) {
+        button.href =
+          "https://news-akcia.ru/t/5pr4u/?pid=1102&erid=2SDnjesJkY8&" +
+          paramsToLink;
+      } else {
+        button.href =
+          "https://news-akcia.ru/t/5pr4u/?pid=1102&erid=2SDnjesJkY8";
+      }
     });
   });
 </script>
