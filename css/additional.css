@@ -57,7 +57,7 @@
 }
 @media only screen and (min-width: 1600px) {
   .title_banner_product_image__inner-f0c {
-    width: 850px !important;
-    top: 0;
+    width: 760px !important;
+    top: 30px;
   }
 }
